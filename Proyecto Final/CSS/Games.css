@@ -1,0 +1,141 @@
+*{
+  color:white;
+  line-height: 1.5;
+}
+body{
+
+  height: 100%;
+  position: relative;
+  background-image: url("../Resources/background.jpg");
+  background-repeat: round;
+  background-attachment: fixed;
+  margin:0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-areas: "header-grid" "gameOne" "gameTwo" "comingSoon" "footer";
+
+  height:100vh;
+  width:100vw;
+}
+
+.main-grid_item{
+  padding: 20px;
+}
+
+.header-grid{
+  grid-area: header-grid;
+  display: grid;
+
+  position:fixed;
+  width: 100%;
+
+  grid-template-columns: 0.2fr 0.8fr 0.2fr;;
+  grid-template-areas: "wipLogo mainNav rrssNav";
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0 15px 50px;
+
+
+  background-color: rgb(0, 0, 0,0.8);
+  font-size: 1.2rem;
+  color:white;
+}
+.wipLogo{
+  grid-area: wipLogo;
+}
+.mainNav{
+  grid-area: mainNav;
+  justify-self: center;
+}
+.rrssNav{
+  grid-area: rrssNav;
+  justify-self: end;
+  padding-right: 100px;
+}
+.header-grid_item li{
+    display: inline;
+    padding: 0px 15px 0px 15px;
+}
+.header-grid a:hover{
+  color: #00B63E;
+}
+#gamesLink{
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-underline-position: under;
+}
+
+main{
+  padding-top: 50px;
+}
+.gameOne {
+  grid-area: gameOne;
+  display: flex;
+
+  align-items: center;
+
+  padding: 50px;
+  border-bottom-style: solid;
+  border-bottom-width: thick;
+  border-bottom-color: black;
+
+  padding: 50px 50px;
+  text-align: right;
+}
+.firstImage{
+  padding-right: 300px;
+}
+
+.gameTwo {
+  grid-area: gameTwo;
+  display: flex;
+
+  align-items: center;
+  flex-direction: row-reverse;
+
+  border-bottom-style: solid;
+  border-bottom-width: thick;
+  border-bottom-color: black;
+
+  padding: 50px;
+
+}
+
+.secondImage{
+  padding-left: 300px;
+
+}
+
+.comingSoon {
+  grid-area: comingSoon;
+  display: flex;
+  align-items: center;
+
+  text-align: right;
+  padding: 50px 50px;
+}
+.thirdImage{
+    padding-right: 300px;
+}
+
+.gameText h2{
+    font-size: 2rem;
+    padding-bottom: 25px;
+}
+
+footer{
+
+  grid-area: footer;
+
+
+
+  background-color: rgb(0, 0, 0,0.8);
+  font-size: 1rem;
+  color:white;
+  text-align: center;
+  padding: 50px;
+}

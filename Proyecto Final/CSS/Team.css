@@ -1,0 +1,129 @@
+*{
+  color:white;
+  line-height: 1.5;
+}
+body{
+
+  height: 100%;
+  position: relative;
+  background-image: url("../Resources/background.jpg");
+  background-repeat: round;
+  background-attachment: fixed;
+  margin:0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.3fr 0.3fr 0.3fr 0.2fr;
+  grid-template-areas: "header-grid header-grid header-grid" "introduction introduction introduction" "dev1 dev2 dev3" "dev4 dev5 dev6" "footer footer footer";
+
+  height:100vh;
+  width:100vw;
+}
+
+.main-grid_item{
+  padding: 20px;
+}
+
+.header-grid{
+  grid-area: header-grid;
+  display: grid;
+
+  position:fixed;
+  width: 100%;
+
+  grid-template-columns: 0.2fr 0.8fr 0.2fr;;
+  grid-template-areas: "wipLogo mainNav rrssNav";
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0 15px 50px;
+
+
+  background-color: rgb(0, 0, 0,0.8);
+  font-size: 1.2rem;
+  color:white;
+}
+.wipLogo{
+  grid-area: wipLogo;
+}
+.mainNav{
+  grid-area: mainNav;
+  justify-self: center;
+}
+.rrssNav{
+  grid-area: rrssNav;
+  justify-self: end;
+  padding-right: 100px;
+}
+.header-grid_item li{
+    display: inline;
+    padding: 0px 15px 0px 15px;
+}
+.header-grid a:hover{
+  color: #00B63E;
+}
+#teamLink{
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-underline-position: under;
+}
+.teamIntro{
+  padding: 100px 500px;
+  text-align: center;
+  grid-area: introduction;
+}
+
+.teamIntro h1
+{
+  font-size: 3rem;
+  padding-bottom: 25px;
+}
+
+.teamIntro figure{
+  padding: 50px;
+}
+
+.dev{
+  text-align: center;
+  padding: 50px;
+}
+
+.dev h2{
+  font-size: 1.5rem;
+    padding-top: 5px;
+}
+.dev h3{
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight:normal;
+  padding-bottom: 10px;
+}
+
+.dev p{
+  text-align: justify;
+  padding: 0px 50px;
+}
+
+.dev, #one { grid-area: dev1; }
+
+.dev, #two { grid-area: dev2; }
+
+.dev, #three{ grid-area: dev3; }
+
+.dev, #four { grid-area: dev4; }
+
+.dev, #five { grid-area: dev5; }
+
+.dev, #six { grid-area: dev6; }
+
+footer{
+
+  grid-area: footer;
+
+  background-color: rgb(0, 0, 0,0.8);
+  font-size: 1rem;
+  color:white;
+  text-align: center;
+  padding: 50px;
+}
